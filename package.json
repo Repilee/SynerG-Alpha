@@ -1,13 +1,33 @@
 {
   "name": "synerg",
-  "description": "A very fun bot. An ordinary bot.",
   "version": "1.0.0",
+  "description": "A very fun bot. An ordinary bot.",
   "main": "main.js",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "discord.js": "^11.2.1",
+    "fs-nextra": "^0.2.1",
+    "moment": "^2.18.1",
+    "return-deep-diff": "^0.2.7",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "winston": "^2.3.1",
+    "opusscript": "^0.0.3",
+    "ytdl-core": "^0.12.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node main.js"
   },
-  "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "SynerG-Bot"
+  },
+  "keywords": [
+    "node",
+    "modules",
+    "npm"
+  ],
+  "author": "Repilee",
+  "license": "UNLICENSED"
 }
