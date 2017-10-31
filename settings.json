@@ -1,0 +1,19 @@
+{
+	"ownerrolename": "Bot Owner",
+	"modrolename": "Chat Mod",
+	"adminrolename": "Bot Admin",
+	"botdeveloperid": "227589177359728640",
+	"version": "1.0",
+	"prefix": "!",
+	"token": "MzUzNjc4NTc3MTU1MTc4NDk2.DJCndw.I50Jcc8nJbKZFpkZIKaY-s9IOKY",
+	"logchannel": "logs",
+	"image_link_affirmative": 	"http://i.imgur.com/mlUqB6f.png",
+	"image_link_affirmative_color":"0x00AE86",
+	"image_link_warning": 			"http://i.imgur.com/VsU2c64.png",
+	"image_link_warning_color": "0xf4ce42",
+	"image_link_negative": 			"http://i.imgur.com/tSlupol.png",
+	"image_link_negative_color":"0xf44542",
+	"image_link_ban": 					"https://i.imgur.com/FkkfM5Y.png",
+	"image_link_sG": 						"https://i.imgur.com/EidYdsD.png",
+	"filterresponse": "true"
+}
