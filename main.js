@@ -53,7 +53,6 @@ client.on('message', message => { //Message listener
     .setDescription(`Oops! There is no log channel available in this server. Please insert a log channel named ${settings.logchannel}. This is neccessary in order for the bot to work properly.`)
     .setFooter('Bot Error - SynerG');
   message.channel.send({embed}).catch(console.error);
-  break;
   }
       let permit = message.guild.member(message.author).roles.has('354069728584531979')
       let permpermit = message.guild.member(message.author).roles.has('353732664093835275') //Checks if it has permit, i used try due to crashing and disable DMs.
