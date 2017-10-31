@@ -43,7 +43,7 @@ let kickMember = message.guild.member(user);
   } else {
      if (reason.length < 1) {
 const embed = new Discord.RichEmbed()
-.setColor({settings.image_link_negative_color})
+.setColor(`{settings.image_link_negative_color}`)
 .setTimestamp()
 .setAuthor('A server moderator has attempted to kick you.',`${settings.image_link_negative}`)
 .addField('Reason:', 'No reason specified.')
@@ -52,7 +52,7 @@ const embed = new Discord.RichEmbed()
 user.send({embed}).catch(console.error).then
   kickMember.kick().then(member => {
     const embed = new Discord.RichEmbed()
-      .setColor(0x76b352)
+      .setColor(`${settings.image_link_affirmative_color}`)
       .setTimestamp()
       .setAuthor('Kick System', `${settings.image_link_affirmative}`)
       .setFooter('SynerG Moderation Bot')
@@ -65,10 +65,9 @@ user.send({embed}).catch(console.error).then
   }).catch(e => {
     console.error(e);
   });
-}
 } else {
   const embed = new Discord.RichEmbed()
-  .setColor({settings.image_link_negative_color})
+  .setColor(`${settings.image_link_negative_color}`)
   .setTimestamp()
   .setAuthor('A server moderator has attempted to kick you.',`${settings.image_link_negative}`)
   .addField('Reason:', reason)
@@ -77,7 +76,7 @@ user.send({embed}).catch(console.error).then
   user.send({embed}).catch(console.error).then
     kickMember.kick().then(member => {
       const embed = new Discord.RichEmbed()
-        .setColor(0x76b352)
+        .setColor(`${settings.image_link_affirmative_color}`)
         .setTimestamp()
         .setAuthor('Kick System', `${settings.image_link_affirmative}`)
         .setFooter('SynerG Moderation Bot')
@@ -92,6 +91,7 @@ user.send({embed}).catch(console.error).then
     });
   }
   }
+}
 
   exports.conf = {
   enabled: true,
