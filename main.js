@@ -139,7 +139,7 @@ client.elevation = message => {
 };
 
 
-client.login(settings.token).catch(error => console.log(error));
+client.login(process.env.BOT_TOKEN);
 
 var regtoken = /[\w\d{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('error', e => {
