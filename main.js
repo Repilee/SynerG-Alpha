@@ -45,16 +45,6 @@ client.on('message', message => { //Message listener
    "as$h0le", "ass ", "d1ck ", " dick"]
   try {
     let modlog = client.channels.find('name', settings.logchannel);
-  if (!modlog) {
-    const embed = new Discord.RichEmbed()
-    .setColor(settings.image_link_negative_color)
-    .setTimestamp()
-    .setAuthor('Bot Error',`${settings.image_link_negative}`)
-    .setDescription(`Oops! There is no log channel available in this server. Please insert a log channel named ${settings.logchannel}. This is neccessary in order for the bot to work properly.`)
-    .setFooter('Bot Error - SynerG');
-  message.channel.send({embed}).catch(console.error);
-  return;
-  }
       let permit = message.guild.member(message.author).roles.has('354069728584531979')
       let permpermit = message.guild.member(message.author).roles.has('353732664093835275') //Checks if it has permit, i used try due to crashing and disable DMs.
       for (var i = 0; i < forbidenWords.length; i++) { //Does the math for each arrays
