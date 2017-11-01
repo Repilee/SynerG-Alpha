@@ -6,7 +6,6 @@ require('./util/eventLoader')(client);
 const settings = require('./settings.json');
 const ddiff = require('return-deep-diff')
 const fs = require('fs');
-const superagent = require('superagent')
 process.on('unhandledRejection', console.error);
 
 const log = message => {
