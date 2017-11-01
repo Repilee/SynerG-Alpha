@@ -45,8 +45,8 @@ client.on('message', message => { //Message listener
    "as$h0le", "ass ", "d1ck ", " dick"]
   try {
     let modlog = client.channels.find('name', settings.logchannel);
-      let permit = message.guild.member(message.author).roles.has('354069728584531979')
-      let permpermit = message.guild.member(message.author).roles.has('353732664093835275') //Checks if it has permit, i used try due to crashing and disable DMs.
+      let permit = message.guild.member(message.author).roles.has('353720407498555393')
+      let permpermit = message.guild.member(message.author).roles.has('375081580814925837') //Checks if it has permit, i used try due to crashing and disable DMs.
       for (var i = 0; i < forbidenWords.length; i++) { //Does the math for each arrays
         if (message.content.includes(forbidenWords[i])) { //Checks if it includes it from the array.
         if (!permit && !permpermit)
