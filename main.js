@@ -48,7 +48,7 @@ client.on('message', message => { //Message listener
         if (settings.filterresponse == "true") {
           if (message.content.includes('/invite')) {
         message.delete(5) //Deletes if it doesn't have permit, and is one of the forbidden words in the array.
-        client.channels.get(modlog.id).send(`${message.author} attempted to type "${message.content}" Action: Discord Invite`).catch(console.error);
+        client.channels.get(modlog.id).send(`${message.author} attempted to type "**${message.content}**" Action: **Discord Invite**`).catch(console.error);
           message.reply("Do not post invite links. This server does not allow advertising.")
           break;
         }

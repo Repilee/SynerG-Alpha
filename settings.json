@@ -1,7 +1,7 @@
 {
-	"ownerrolename": "Bot Owner",
-	"modrolename": "Chat Mod",
-	"adminrolename": "Bot Admin",
+	"ownerrolename": "Programmer",
+	"modrolename": "Pacifico Admins",
+	"adminrolename": "Server Admins",
 	"botdeveloperid": "227589177359728640",
 	"version": "1.0",
 	"prefix": "!",
