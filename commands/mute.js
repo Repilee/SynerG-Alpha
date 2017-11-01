@@ -56,21 +56,20 @@ exports.run = function(client, message, args) {
 
 console.log("Violated " + user.user.username + " for " + seconds + " days.");
 
-      message.reply(":white_check_mark: Violated **" + user.user.username + "**!");
+      message.reply(":ok_hand: Muted **" + user.user.username + "**!");
 
       user.addRole(muteRole)
 
-             client.channels.get(violog.id).send(`${user}` + " is now Violator for **" + remind + "** and will expire in **" + seconds + "** days.");
+             client.channels.get(violog.id).send(`${user}` + " is now suspended for **" + remind + "** and will expire in **" + seconds + "** days.");
 
 	 const embed = new Discord.RichEmbed()
 
-          .setColor(`${}`)
-
+          .setColor(`${settings.image_link_warning_color}`)
           .setTimestamp()
 
           .setFooter('SynerG Moderation Bot')
 
-          .setAuthor('You violated the law!', `${settings.image_link_warning}`)
+          .setAuthor('A moderator has muted you!', `${settings.image_link_warning}`)
 
           .addField('Moderator:', `${message.author}`)
 
@@ -87,19 +86,19 @@ console.log("Violated " + user.user.username + " for " + seconds + " days.");
 
         console.log("Violator of " + user.user.username + " has expired!");
 
-        client.channels.get(violog.id).send(`${user}'s violator status has expired after **` + seconds + `** days.`);
+        client.channels.get(violog.id).send(`${user}'s suspension has expired after **` + seconds + `** days.`);
 
-		user.send(":white_check_mark: You are no longer a violator. Abide by the rules.").catch(console.error);
+		user.send("You are no longer suspended. Abide by the rules.").catch(console.error);
 
         const embed = new Discord.RichEmbed()
 
-          .setColor(0x76b352)
+          .setColor(`${settings.image_link_affirmative_color}`)
 
           .setTimestamp()
 
           .setFooter('SynerG Moderation Bot')
 
-          .setAuthor('Violator System - Expired', `${settings.image_link_affirmative}`)
+          .setAuthor('Mute System - Expired', `${settings.image_link_affirmative}`)
 
           .addField('Who:', `${user}`)
 
@@ -140,7 +139,7 @@ exports.help = {
 
   name: 'violate',
 
-  description: 'The bot adds the Violator role to the specified person for up to 7 days. [Moderator+ Only]',
+  description: 'The bot adds the Violator role to the specified person for up to 7 days.',
 
   usage: 'violate <mention> <days> <string>'
 
