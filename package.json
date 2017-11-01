@@ -1,6 +1,6 @@
 {
   "name": "synerg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very fun bot. An ordinary bot.",
   "main": "main.js",
   "dependencies": {
