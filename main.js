@@ -36,7 +36,7 @@ fs.readdir('./commands/', (err, files) => {
 
 client.on('message', message => { //Message listener
   if (message.channel.type === 'text') {
-  forbidenWords = ["/invite", "discord.gg/", ".gg", "discordapp.com"]
+  forbidenWords = ["/invite", "discord.gg/", ".gg"]
   try {
     let modlog = client.channels.find('name', settings.logchannel);
       let permit = message.guild.member(message.author).roles.has('374295179831672844')
