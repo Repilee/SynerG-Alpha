@@ -41,11 +41,8 @@ client.on('message', message => { //Message listener
    "www.discordapp", "pornhub.com"]
   try {
     let modlog = client.channels.find('name', settings.logchannel);
-      let permit = message.guild.member(message.author).roles.has('353720407498555393')
-      let permpermit = message.guild.member(message.author).roles.has('375081580814925837') //Checks if it has permit, i used try due to crashing and disable DMs.
       for (var i = 0; i < forbidenWords.length; i++) { //Does the math for each arrays
         if (message.content.includes(forbidenWords[i])) { //Checks if it includes it from the array.
-        if (!permit && !permpermit)
         if (settings.filterresponse == "true") {
           if (message.content.includes('/invite')) {
         message.delete(5) //Deletes if it doesn't have permit, and is one of the forbidden words in the array.
