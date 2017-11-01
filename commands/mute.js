@@ -137,11 +137,11 @@ exports.conf = {
 
 exports.help = {
 
-  name: 'violate',
+  name: 'mute',
 
-  description: 'The bot adds the Violator role to the specified person for up to 7 days.',
+  description: 'The bot adds the suspendedsuspended role to the specified person for up to 7 days.',
 
-  usage: 'violate <mention> <days> <string>'
+  usage: 'mute <mention> <days> <string>'
 
 };
 
