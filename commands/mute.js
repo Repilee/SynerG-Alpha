@@ -130,7 +130,7 @@ exports.conf = {
 
   aliases: [],
 
-  permLevel: 2
+  permLevel: 1
 
 };
 
@@ -139,7 +139,7 @@ exports.help = {
 
   name: 'mute',
 
-  description: 'The bot adds the suspendedsuspended role to the specified person for up to 7 days.',
+  description: 'The bot adds the suspended role to the specified person for up to 7 days.',
 
   usage: 'mute <mention> <days> <string>'
 
