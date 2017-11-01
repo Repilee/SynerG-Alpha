@@ -50,15 +50,15 @@ client.on('message', message => { //Message listener
           if (message.content.includes('/invite')) {
 
             console.log(message.author.username + ' attempted to type: ' + message.content + '. Action: Discord Invite')
+                message.delete(5) //Deletes if it doesn't have permit, and is one of the forbidden words in the array.
         client.channels.get(modlog.id).send(`${message.author} attempted to type "${message.content}" Action: Discord Invite`).catch(console.error);
-          message.delete(5) //Deletes if it doesn't have permit, and is one of the forbidden words in the array.
           message.reply("Do not post invite links. Read **Rule 3.4** in #welcome channel.")
           break;
         } else {
           console.log(message.author.username + ' attempted to type: ' + message.content + '. Action: Link')
+        message.delete(5)
       client.channels.get(modlog.id).send(`${message.author} attempted to type "${message.content}" Action: Link`).catch(console.error);
           message.reply("Request for a permit to post links.")
-          message.delete(5)
           break;
         }
         } else {
