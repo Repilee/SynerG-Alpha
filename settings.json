@@ -4,7 +4,7 @@
 	"adminrolename": "Server Admins",
 	"botdeveloperid": "227589177359728640",
 	"version": "1.0",
-	"prefix": "!",
+	"prefix": "$",
 	"token": "MzUzNjc4NTc3MTU1MTc4NDk2.DJCndw.I50Jcc8nJbKZFpkZIKaY-s9IOKY",
 	"logchannel": "logs",
 	"image_link_affirmative": 	"http://i.imgur.com/mlUqB6f.png",
