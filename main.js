@@ -39,10 +39,6 @@ client.on('message', message => { //Message listener
   forbidenWords = ["http:", ".be", "https:",
   "/invite", "www.", ".com", ".net", "http", "https", "discordapp.com", "invite/",
    "www.discordapp", "pornhub.com"]
-  pornforbidenWords = ["penis", "dick ", "vagina", "boobs", "b00bs", "big butt", "porn", "p0rn",
-   " d1ck", "p3nis", "peni$", "v@gina", "v@gin@", "vagin@", "p3ni$", "b00b$", "boob$", "b0ob$",
-   "bo0b$", "boob", "b00b", "bo0b", "b0ob", " ass", "asshole", "assh0le", " a$$", " a$s", " as$",
-   "as$h0le", "ass ", "d1ck ", " dick"]
   try {
     let modlog = client.channels.find('name', settings.logchannel);
       let permit = message.guild.member(message.author).roles.has('353720407498555393')
@@ -71,20 +67,6 @@ client.on('message', message => { //Message listener
       {
         message.guild.member(message.author).removeRole('354069728584531979')
       }
-      }
-    }
-    for (var i = 0; i < pornforbidenWords.length; i++) { //Does the math for each arrays
-      if (message.content.includes(pornforbidenWords[i])) { //Checks if it includes it from the array.
-      if (!permpermit)
-        if (settings.filterresponse == "true") {
-          console.log(message.author.username + ' attempted to type: ' + message.content + '. Action: NSFW')
-      client.channels.get(modlog.id).send(`${message.author} attempted to type "${message.content}" Action: NSFW`).catch(console.error);
-          message.delete(5)
-          message.reply("No NSFW content is allowed. Read **Rule 3.1** in #welcome channel.")
-          break;
-        } else {
-          message.delete(5)
-        }
       }
     }
   }
