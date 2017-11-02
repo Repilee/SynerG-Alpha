@@ -43,7 +43,7 @@ let kickMember = message.guild.member(user);
   } else {
      if (reason.length < 1) {
 const embed = new Discord.RichEmbed()
-.setColor(`{settings.image_link_negative_color}`)
+.setColor(`${settings.image_link_negative_color}`)
 .setTimestamp()
 .setAuthor('A server moderator has attempted to kick you.',`${settings.image_link_negative}`)
 .addField('Reason:', 'No reason specified.')
